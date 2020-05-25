@@ -1,51 +1,20 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-content>
-      <HelloWorld/>
-    </v-content>
-  </v-app>
+  <div id="app">
+    <AppNavigation />
+    <router-view/>
+  </div>
 </template>
 
+<style lang="scss">
+</style>
+
 <script>
-import HelloWorld from './components/HelloWorld';
+import AppNavigation from '@/components/Navigation.vue'
 
 export default {
-  name: 'App',
-
+  name: 'Main',
   components: {
-    HelloWorld,
-  },
-
-  data: () => ({
-    //
-  }),
-};
+    AppNavigation
+  }
+}
 </script>
